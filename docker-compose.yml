@@ -60,6 +60,8 @@ services:
   #   restart: on-failure
   tikv0:
     image: pingcap/tikv:latest
+    ports:
+      - "20160:20160"
     volumes:
       - ./config/tikv.toml:/tikv.toml:ro
       - ./data:/data
